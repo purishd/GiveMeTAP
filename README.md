@@ -18,3 +18,11 @@ From technical implementation perspective, following are high level steps.
 # Build a Power App
 
 # Build a Power Automate flow
+This is how my sample Power App looks like. Follow below guidelines to create a similar Power App or use your own creativity to extend this Power App and make it even better.
+![image](https://github.com/purishd/GiveMeTAP/assets/11908199/a64dee82-9a65-42e4-b19b-5b954c92a0de)
+
+Following controls are being used in this super simple app.
+1. An Image for customer logo.
+2. Label for the name of the app.
+3. Label and text input to get the user UPN.
+4. Button to share TAP that will hook into my Power Automate flow.
