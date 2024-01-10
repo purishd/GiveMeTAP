@@ -15,7 +15,6 @@ From technical implementation perspective, following are high level steps.
 1. Build a Power App UI that will collect user's UPN. This is the front-end that will be used by the end user to generate TAP ans display it on the screen itself.
 2. Build Power Automate flow that will read the user's UPN and generate TAP by calling Graph API.
 
-# Build a Power App
 
 # Build a Power App
 
