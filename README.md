@@ -1,7 +1,7 @@
 # GiveMeTAP
 | Title | Description |Author|
 |-----|---------------|-----|
-| Give Me TAP|This repo is created to help build a quick PowerApps application that helps your users generate TAP and makes your administrators/helpdesk job easier.               |purishd|
+| Give Me TAP|This repo is created to help build a quick PowerApps application that helps your users generate TAPby themselves and makes your administrators/helpdesk job easier.               |purishd|
 
 
 # Problem Statement
