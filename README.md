@@ -1,7 +1,7 @@
 # GiveMeTAP
 | Title | Description |Author|
 |-----:|---------------|-----|
-| Give Me TAP|This repo is created to help build a quick PowerApps application that helps your users generate TAP and makes your administrators/helpdesk job easier.               |purishd|
+| Give Me TAP |This repo is created to help build a quick PowerApps application that helps your users generate TAP and makes your administrators/helpdesk job easier.               |purishd|
 
 
 # Problem Statement
@@ -48,3 +48,41 @@ Set(newTAP,TAPFlow.Run(UPNTextInput.Text).tap););
   Set(newTAP,"")
 ```
 # Build a Power Automate flow
+Follow below steps to create Power Automate Flow. This is how your overall flow will look like once all the steps are added to it.
+
+   ![image](https://github.com/purishd/GiveMeTAP/assets/11908199/05dc79a8-2fe5-434e-9411-85657bc6a6c5)
+
+
+1. Create a new instant cloud flow.
+2. Choose PowerApps as trigger of this flow.
+
+   ![image](https://github.com/purishd/GiveMeTAP/assets/11908199/9f17ec93-266a-4e4e-a167-190074f3156f)
+
+3. Intialize a variable that will collect the user UPN value from Power Apps.
+   ![image](https://github.com/purishd/GiveMeTAP/assets/11908199/57fb54cb-2240-4f3d-b4cc-ed8720788e18)
+
+4. Get a graph token using the client credential flow. You can choose other ways to get a graph token as you prefer.
+
+   ![image](https://github.com/purishd/GiveMeTAP/assets/11908199/bece3754-6b97-4a9c-97b7-adc23673ea13)
+
+5. Parse the JSON output from above step to get the access token.
+
+   ![image](https://github.com/purishd/GiveMeTAP/assets/11908199/b4bdb038-f5d6-4757-9062-73944bb092cd)
+
+6. Make a Graph API call to generate TAP.
+
+   ![image](https://github.com/purishd/GiveMeTAP/assets/11908199/6a684038-dd82-47fb-b961-9e8c10572f90)
+
+7. Parse the JSON output from above step to get the newly genrated TAP.
+
+   ![image](https://github.com/purishd/GiveMeTAP/assets/11908199/5f51f174-3488-4f15-b90a-af024b5b10be)
+
+8. Add compose action to get value of TAP.
+
+   ![image](https://github.com/purishd/GiveMeTAP/assets/11908199/45b0e1b3-e606-4e76-afac-052733a026c1)
+
+9. Send the generated TAP to Power App in a variable.
+    
+    ![image](https://github.com/purishd/GiveMeTAP/assets/11908199/4a7c329b-e0b6-4e1f-a9a7-bd97f680f08d)
+
+
