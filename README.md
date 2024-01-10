@@ -27,3 +27,23 @@ Following controls are being used in this super simple app.
 2. Label for the name of the app.
 3. Label and text input to get the user UPN.
 4. Button to share TAP that will hook into my Power Automate flow.
+
+Calling below code on "OnSelect" property of the Share TAP button. This code will help set the buttonPressed and then call Power Automate flow and set the value of variable newTAP to generated TAP.
+```
+If(IsBlank(UPNTextInput.Text), Notify("Please enter user UPN",NotificationType.Error),
+Set(buttonPressed,"shareTAPButton");
+Set(newTAP,TAPFlow.Run(UPNTextInput.Text).tap););
+```
+5. A hidden label that only lights up when the TAP is generated and shows the generated TAP on the screen for end user to view it.
+
+   Making this label visible when share TAP button is pressed.
+```
+   If(buttonPressed = "shareTAPButton", true, false)
+```
+   Setting the "Text" property of this button to variable newTAP. This variable is blank initially but its value is set when the Power Automate flow sends the TAP back to the Power App.
+  
+6. A reset button that I am using to quickly reset the values of controls. Feel free to use any other ways as you like to reset the form values.
+```
+  Reset(UPNTextInput);
+  Set(newTAP,"")
+```
