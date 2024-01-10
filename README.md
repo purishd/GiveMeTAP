@@ -17,7 +17,8 @@ From technical implementation perspective, following are high level steps.
 
 # Build a Power App
 
-# Build a Power Automate flow
+# Build a Power App
+
 This is how my sample Power App looks like. Follow below guidelines to create a similar Power App or use your own creativity to extend this Power App and make it even better.
 
 ![image](https://github.com/purishd/GiveMeTAP/assets/11908199/a64dee82-9a65-42e4-b19b-5b954c92a0de)
@@ -47,3 +48,4 @@ Set(newTAP,TAPFlow.Run(UPNTextInput.Text).tap););
   Reset(UPNTextInput);
   Set(newTAP,"")
 ```
+# Build a Power Automate flow
